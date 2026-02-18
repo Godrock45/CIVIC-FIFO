@@ -2,7 +2,8 @@
 
 🚀 Ready/Valid FIFO + Round-Robin Merge (SystemVerilog)
 
-A parameterized, synthesizable FIFO with ready/valid handshaking, plus a fair round-robin merge fabric that combines multiple input streams into one output.
+Single-clock, synchronous-reset design
+A parameterized, single-clock, synchronous-reset design and synthesizable FIFO with ready/valid handshaking, plus a fair round-robin merge fabric that combines multiple input streams into one output.
 
 Designed to look simple, behave correctly, and scale cleanly.
 
