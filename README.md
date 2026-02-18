@@ -19,8 +19,10 @@ N input streams
 ├──────────┤
 │ FIFO[3]  │
 └──────────┘
+
 Each input gets its own FIFO, preventing head-of-line blocking.
 A round-robin arbiter guarantees fairness when multiple FIFOs have data.
+
 
 
 
@@ -61,7 +63,7 @@ count tracks occupancy exactly
 
 
 
-# ⏱ Cycle-by-Cycle Example
+⏱ Cycle-by-Cycle Example
 
 Cycle:        0   1   2   3
 in_valid:     1   1   0   0
