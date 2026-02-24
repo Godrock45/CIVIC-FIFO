@@ -5,7 +5,7 @@ module fifo_rv #(
   parameter int DEPTH = 16
 ) (
   input  logic clk,
-  input  logic rst,        // sync reset (you handle inside)
+  input  logic rst,        // sync reset 
 
   // Input (producer -> FIFO)
   input  logic in_valid,
@@ -17,7 +17,6 @@ module fifo_rv #(
   input  logic out_ready,
   output logic [WIDTH-1:0]out_data,
 
-  // Status (optional but useful)
   output logic full,
   output logic empty,
   output logic [$clog2(DEPTH+1)-1:0] count
@@ -61,7 +60,7 @@ end
 assign out_data=mem[rd_ptr];
 
 
-  // you implement storage + pointers + handshake logic
+
 endmodule
 
 
@@ -123,7 +122,7 @@ always_ff @(posedge clk)begin
   end
 end
 
-  // you implement rr pointer + grant selection
+
 endmodule
 
 module onehot_mux #(
@@ -144,7 +143,7 @@ always_comb begin
     end
   end
 end
-  // you implement mux (for-loop / case / etc.)
+  
 endmodule
 
 module fifo_rr_merge #(
@@ -168,4 +167,5 @@ module fifo_rr_merge #(
 
 
 endmodule
+
 
